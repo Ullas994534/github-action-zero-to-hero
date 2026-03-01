@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ullas Banamigi | DevOps Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Glass Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 40px;
+    display: flex;
+    gap: 30px;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #00f5ff;
+    text-shadow: 0 0 10px #00f5ff;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.hero span {
+    color: #00f5ff;
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: #00f5ff;
+    color: #000;
+    transition: 0.4s ease;
+}
+
+.hero button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00f5ff;
+}
+
+/* Section Styling */
+section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #00f5ff;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    padding: 30px;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(0,245,255,0.4);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #00f5ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    opacity: 0.8;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="glass">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero fade-in">
+    <h1>Hello, I'm <span>Ullas Banamigi</span></h1>
+    <p>DevOps Engineer | Cloud & CI/CD Specialist | Automation Enthusiast</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Let's Connect
+    </button>
+</div>
+
+<!-- About -->
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="glass card">
+        <p>
+            Passionate DevOps Engineer focused on building scalable CI/CD pipelines,
+            automating infrastructure, and optimizing cloud deployments.
+            Experienced with Git, GitHub, Linux, Docker, and cloud platforms.
+            Continuously learning and implementing modern DevOps practices.
+        </p>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="cards">
+        <div class="glass card">
+            <h3>CI/CD & Version Control</h3>
+            <p>Git, GitHub, GitHub Actions, PR Automation</p>
+        </div>
+        <div class="glass card">
+            <h3>Cloud & Containers</h3>
+            <p>Docker, AWS, Linux Servers</p>
+        </div>
+        <div class="glass card">
+            <h3>Infrastructure & Automation</h3>
+            <p>Bash Scripting, YAML, Deployment Pipelines</p>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="cards">
+        <div class="glass card">
+            <h3>CI/CD Automation Pipeline</h3>
+            <p>Designed and implemented automated GitHub Actions workflows for production-ready deployments.</p>
+        </div>
+        <div class="glass card">
+            <h3>Dockerized Web App</h3>
+            <p>Containerized full-stack application with optimized Docker builds and environment configurations.</p>
+        </div>
+        <div class="glass card">
+            <h3>Git CLI Workflow Automation</h3>
+            <p>Managed repositories, PRs, and issue workflows entirely from terminal using GitHub CLI.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="glass card" style="text-align:center;">
+        <p>Let's collaborate on DevOps, Cloud & Automation projects.</p>
+        <p style="margin-top:10px;">Email: your-email@example.com</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Ullas Banamigi | Built with ❤️ using Modern Glass UI
+</footer>
+
+</body>
+</html>
