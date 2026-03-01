@@ -1,0 +1,14 @@
+#This is a workflow for hello everyone.
+name: hello 
+#run on a trigger
+  on:
+    push:
+      branches: main
+  jobs:
+    greet:
+      runs on: ubuntu-latest
+      step:
+        -name: say Hello friends
+         run: echo "hello friends"
+        -name: ask How are you
+         run: echo"How are you?"
