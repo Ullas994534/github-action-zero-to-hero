@@ -7,24 +7,24 @@ name: CICD
     jobs:
     
       code:
-        runs-on: ubuntu-latest
+          runs-on: ubuntu-latest
         steps:
           - name: checkout code
             run: echo "COde Clone from GitHub"
 
       build:
-        runs-on: ubuntu-latest
+          runs-on: ubuntu-latest
       steps:
-      - name: Build Docker Container
-        run: echo "Docker Container build"
+         - name: Build Docker Container
+           run: echo "Docker Container build"
       test:
-        runs-on: ubuntu-latest
+          runs-on: ubuntu-latest
       steps:
-      - name: Test the container
-        run: echo "Testing the container"
+        - name: Test the container
+          run: echo "Testing the container"
       deploy:
-        runs-on: ubuntu-latest
+         runs-on: ubuntu-latest
       steps:
-      - name: Deploying the app
-        run: echo "Docker compose deployed the app"
+        - name: Deploying the app
+          run: echo "Docker compose deployed the app"
 
